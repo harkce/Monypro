@@ -6,8 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserTV extends Model
 {
-   //
-   public function userTV(){
-      
-   }
+    protected $table = 'user_tv';
 }
