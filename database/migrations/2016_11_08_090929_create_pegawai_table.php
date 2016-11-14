@@ -15,10 +15,8 @@ class CreatePegawaiTable extends Migration
     {
         Schema::create('pegawai', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_pegawai');
             $table->string('alamat_pegawai');
             $table->string('nomor_hp');
-            $table->string('tipe_pegawai');
             $table->integer('id_agency')->unsigned();
             $table->foreign('id_agency')->references('id')->on('agency');
             $table->integer('id_login')->unsigned();

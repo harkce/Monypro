@@ -15,6 +15,7 @@ class CreateKandatelTable extends Migration
     {
         Schema::create('kandatel', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nmKandatel');
             $table->timestamps();
         });
     }
