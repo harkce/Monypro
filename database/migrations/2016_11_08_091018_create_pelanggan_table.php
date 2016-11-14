@@ -16,6 +16,16 @@ class CreatePelangganTable extends Migration
         Schema::create('pelanggan', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_pelanggan');
+            $table->string('alamat_pelanggan');
+            $table->string('noHP');
+            $table->string('typeRumah');
+            $table->string('kendaraan');
+            $table->string('pengeluaranInet');
+            $table->string('jarakODP');
+            $table->string('ket');
+            $table->string('permintaan');
+            $table->string('dataPel');
+            $table->integer('jmlPengguna');
             $table->integer('id_status')->unsigned();
             $table->foreign('id_status')->references('id')->on('status');
             $table->integer('id_uie')->unsigned();
