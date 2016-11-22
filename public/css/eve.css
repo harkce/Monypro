@@ -1,0 +1,144 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #eeeeee;
+  justify-content: left;
+  align-items: center;
+}
+.fundo {
+  position: relative;
+  margin: 50px auto;
+  width: 550px;
+  height: 400px;
+}
+.eve {
+  position: absolute;
+  top: 80px;
+  left: 210px;
+  animation: anda .4s infinite alternate ease-in-out;
+}
+.cabeca {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 120px;
+  height: 82px;
+  border-radius: 100% 100% 80% 80%;
+  background: #fff;
+  animation: own 2s infinite alternate ease-in-out;
+}
+.rosto {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  background: #313131;
+}
+.olho-1{
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  width: 32px;
+  height: 18px;
+  background: #5DC9DB;
+  transform: rotate(16deg);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #5DC9DB;
+  content:"";
+  animation: olhin 4s infinite alternate ease-in-out;
+}
+.olho-2 {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  width: 32px;
+  height: 18px;
+  background: #5DC9DB;
+  transform: rotate(-16deg);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #5DC9DB;
+  content:"";
+  animation: olhinn 4s infinite alternate ease-in-out;
+}
+.corpo {
+  position: absolute;
+  top: 95px;
+  left: 15px;
+  width: 100px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+}
+.corpo::after {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  background: #fff;
+  border-radius: 20%;
+  content:"";
+}
+.braco-1 {
+  position: absolute;
+  left: 100px;
+  width: 30px;
+  height: 110px;
+  transform: rotate(-16deg);
+  border-radius: 50%;
+  background: #fff;
+  animation: levantaa .4s infinite alternate ease-in-out;
+}
+.braco-2 {
+  position: absolute;
+  left: -30px;
+  width: 30px;
+  height: 110px;
+  transform: rotate(16deg);
+  border-radius: 50%;
+  background: #fff;
+  animation: levanta .4s infinite alternate ease-in-out;
+}
+.sombra {
+  width: 90px;
+  height: 10px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+  top: 370px;
+  left: 232px;
+  border-radius: 50%;
+  animation: shadow .4s infinite alternate ease-in-out;
+}
+
+@keyframes anda {
+  0%   {transform: translateY(-5px)}
+  100% {transform: translateY(5px)}
+}
+@keyframes own {
+  100% {transform: rotate(-15deg)}
+}
+@keyframes shadow {
+	0% {transform: scaleX(1)}
+	100% {transform: scaleX(1.2)}
+}
+@keyframes levanta {
+	0% {transform: rotate(16deg)}
+	100% {transform: rotate(22deg)}
+}
+@keyframes levantaa {
+	0% {transform: rotate(-16deg)}
+	100% {transform: rotate(-22deg)}
+}
+
+@keyframes olhin {
+	0% {transform: rotate(16deg)}
+	100% {transform: rotate(-22deg)}
+}
+@keyframes olhinn {
+	0% {transform: rotate(-16deg)}
+	100% {transform: rotate(22deg)}
+}
